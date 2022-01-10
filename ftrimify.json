@@ -1,0 +1,8 @@
+{
+    "enable": true,
+    "path": [
+        {
+            "houdini_version >= '18.5'": "$HOUDINI_PACKAGE_PATH/ftrimify/houdini"
+        }
+    ]
+}
