@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Add ftrimify All to the Gear Menu. -->
+
 <menuDocument>
     <menu>
-        <scriptItem id="ftrimify">
+        <scriptItem id="ftrimify_all">
             <label>ftrimify All String Parameters</label>
-            <scriptCode><![CDATA[import ftrimify;ftrimify.ftrimify_all(kwargs["node"])]]></scriptCode>
+            <insertBefore>preset_menu_strip</insertBefore>
+            <scriptCode><![CDATA[
+import ftrimify
+ftrimify.ftrimify_all(kwargs["node"])
+]]></scriptCode>
         </scriptItem>
     </menu>
 </menuDocument>
