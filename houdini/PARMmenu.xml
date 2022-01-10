@@ -3,7 +3,7 @@
     <menu>
         <scriptItem id="ftrimify">
         <context>
-            <expression>len(kwargs["parms"]) > 0</expression>
+            <expression>len(kwargs["parms"]) > 0 and kwargs["parms"][0].parmTemplate().type() == hou.parmTemplateType.String</expression>
         </context>
             <label>ftrimify</label>
             <scriptCode><![CDATA[import ftrimify;ftrimify.ftrimify(kwargs["parms"][0])]]></scriptCode>
