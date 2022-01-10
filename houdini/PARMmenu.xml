@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Add ftrimify to the "More" section of string parameters. -->
+
 <menuDocument>
 <menu>
     <subMenu id="more_menu"><label>More</label>
@@ -7,7 +10,10 @@
             <expression>len(kwargs["parms"]) > 0 and kwargs["parms"][0].parmTemplate().type() == hou.parmTemplateType.String</expression>
         </context>
             <label>ftrimify</label>
-            <scriptCode><![CDATA[import ftrimify;ftrimify.ftrimify(kwargs["parms"][0])]]></scriptCode>
+            <scriptCode><![CDATA[
+import ftrimify
+ftrimify.ftrimify(kwargs["parms"][0])
+]]></scriptCode>
         </scriptItem>
     </subMenu>
 </menu>
