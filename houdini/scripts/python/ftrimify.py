@@ -36,7 +36,7 @@ def replace_parm(parm, repl):
         parm.deleteAllKeyframes()
         parm.setExpression(repl, expr_lang)
     else:
-        # If the raw parm is just
+        # If the raw parm is just `chs("../some/parm")`
         # Houdini will set the referenced parm instead.
         parm.revertToDefaults()
         parm.set(repl)
